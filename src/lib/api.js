@@ -45,6 +45,10 @@ class APIService {
     });
   }
 
+  async signup(userData) {
+    return this.register(userData);
+  }
+
   async login(credentials) {
     return this.request('/auth/login', {
       method: 'POST',

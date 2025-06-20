@@ -25,7 +25,7 @@ const Input = forwardRef(({
       <input
         type={type}
         className={cn(
-          'peer w-full px-3 pt-6 pb-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:border-gray-600 dark:bg-gray-800 dark:text-white transition-all',
+          'peer w-full px-3 pt-6 pb-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 transition-all',
           error && 'border-red-500 focus:ring-red-500',
           className
         )}
@@ -38,7 +38,7 @@ const Input = forwardRef(({
       {label && (
         <motion.label
           className={cn(
-            'absolute left-3 text-gray-500 dark:text-gray-400 transition-all pointer-events-none',
+            'absolute left-3 text-gray-500 transition-all pointer-events-none',
             (focused || hasValue || props.value) 
               ? 'top-2 text-xs' 
               : 'top-4 text-sm',

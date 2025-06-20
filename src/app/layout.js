@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProviderWrapper } from "@/theme/provider";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300`}
         style={{
@@ -27,9 +27,13 @@ export default function RootLayout({ children }) {
           color: 'var(--foreground)'
         }}
       >
-        <ThemeProviderWrapper>
-          {children}
-        </ThemeProviderWrapper>
+        {children}
+        <Toaster 
+          position="top-right"
+          richColors
+          expand={true}
+          duration={4000}
+        />
       </body>
     </html>
   );

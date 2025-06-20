@@ -8,7 +8,6 @@ import { z } from 'zod';
 import { useRouter } from 'next/navigation';
 import { Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import ThemeToggle from '@/components/ui/theme-toggle';
 import { apiService } from '@/lib/api';
 import { setAuthToken } from '@/lib/auth';
 import { toast } from 'sonner';

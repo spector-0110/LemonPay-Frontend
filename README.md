@@ -222,6 +222,10 @@ Here's a visual overview of the application:
   Your browser does not support the video tag.
 </video>
 
+[![Watch the demo video](screenshots/landingpage.png)](screenshots/demo.mp4)
+[▶️ Click to download and watch the demo video](screenshots/demo.mp4)
+
+
 ### Backend Overview
 ![Task Management](screenshots/backend.png)
 

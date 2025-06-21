@@ -74,6 +74,32 @@ A modern, feature-rich payment and task management application built with Next.j
 - Efficient re-rendering
 - Image optimization with Next.js
 
+### 8. Development Approach
+
+This project was developed following these key principles and practices:
+
+- **Component-First Development**:
+  - Built reusable UI components before page layouts
+  - Focused on component modularity and reusability
+  - Implemented comprehensive prop validation
+  - Created a consistent component API design
+
+- **Agile Methodology**:
+  - Iterative development approach
+  - Continuous integration and deployment
+  - Feature-based branching strategy
+
+- **Performance-First Mindset**:
+  - Optimization of bundle sizes
+  - Lazy loading of components and routes
+  - Image optimization
+
+- **User-Centric Design**:
+  - Mobile-first responsive design
+  - User feedback integration
+  - Intuitive user interface patterns
+
+
 ## 🚀 Quick Start
 
 1. **Clone the repository**
@@ -186,9 +212,27 @@ For other platforms, ensure you:
 1. Build the application (`npm run build`)
 2. Start the production server (`npm run start`)
 
-## 📄 License
+## 📸 Screenshots
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Here's a visual overview of the application:
+
+### Landing Page
+![Landing Page](screenshots/landingpage.png)
+
+### Task Dashboard
+![Task Dashboard](screenshots/dashboard.png)
+
+### Create Task
+![Create Task Modal](screenshots/newTask.png)
+
+### Task Details
+![Task Details](screenshots/tashmanagemnet.png)
+
+### Edit Task
+![Edit Task Modal](screenshots/edittask.png)
+
+### Backend Overview
+![Task Management](screenshots/backend.png)
 
 ## 🤝 Contributing
 
@@ -198,8 +242,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## ✨ Acknowledgments
 
-- Next.js team for the amazing framework
-- Vercel for the deployment platform
-- All contributors and maintainers

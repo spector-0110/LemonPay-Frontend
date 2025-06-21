@@ -1,36 +1,205 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LemonPay Frontend
 
-## Getting Started
+A modern, feature-rich payment and task management application built with Next.js 15 and React 19, designed for seamless task tracking and management.
 
-First, run the development server:
+![LemonPay Logo](/public/lemon.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🎯 Core Features
+
+### 1. Authentication System
+- Secure login and signup functionality
+- Password strength validation with regex patterns
+- JWT-based authentication with HTTP-only cookies
+- Protected routes and API endpoints
+- Form validation using Zod schema
+
+### 2. Task Management Dashboard
+- **Task Overview**:
+  - Comprehensive task listing and organization
+  - Real-time task status updates
+  - Multiple task statuses (Pending, In Progress, Completed)
+  - Task filtering and search capabilities
+
+- **Task Operations**:
+  - Create new tasks with detailed information
+  - Edit existing task details
+  - Delete tasks with confirmation dialog
+  - Task status toggling
+  - Due date and time management
+
+- **Task Categories**:
+  - Overdue task highlighting
+  - Due today task indicators
+  - Task prioritization
+
+### 3. User Interface
+- **Responsive Design**:
+  - Mobile-first approach
+  - Tablet and desktop optimized layouts
+  - Custom mobile detection hooks
+  - Adaptive UI based on screen size
+
+- **Modern UI Components**:
+  - Animated task cards using Framer Motion
+  - Floating action buttons for key actions
+  - Modal dialogs for task operations
+  - Confirmation dialogs for critical actions
+  - Toast notifications for user feedback
+  - Custom button components
+  - Theme toggle with light/dark mode
+
+### 4. Data Management
+- **API Integration**:
+  - RESTful API communication
+  - Secure token management
+  - Error handling with validation
+  - Request/response interceptors
+  - Automatic token refresh
+
+### 5. Search and Filtering
+- Advanced task filtering system
+- Real-time search functionality
+- Multiple filter categories
+- Combined search and filter operations
+
+### 6. State Management
+- Efficient React state management
+- Real-time UI updates
+- Optimistic updates for better UX
+- Error state handling
+
+### 7. Performance Optimizations
+- Dynamic imports for better loading
+- Optimized animations
+- Efficient re-rendering
+- Image optimization with Next.js
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.3.4
+- **UI Library**: React 19.0.0
+- **Styling**: 
+  - Tailwind CSS 4.x
+  - @headlessui/react for accessible components
+  - next-themes for theme management
+- **Form Management**: 
+  - react-hook-form
+  - zod for validation
+- **Animations**: framer-motion
+- **Icons**: lucide-react
+- **Date Handling**: luxon
+- **State Management**: React Hooks
+- **Development Tools**:
+  - ESLint for code quality
+  - TurboPack for fast builds
+  - PostCSS for CSS processing
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                # Next.js 13+ app directory
+│   ├── dashboard/     # Dashboard pages
+│   └── globals.css    # Global styles
+├── components/        # Reusable components
+│   ├── layout/       # Layout components
+│   ├── tasks/        # Task-related components
+│   └── ui/           # UI components
+├── hooks/            # Custom React hooks
+└── lib/             # Utility functions and API
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Configuration
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **next.config.mjs**: Next.js configuration
+- **tailwind.config.js**: Tailwind CSS configuration
+- **postcss.config.mjs**: PostCSS configuration
+- **eslint.config.mjs**: ESLint configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚥 Available Scripts
 
-## Learn More
+- `npm run dev` - Start development server with TurboPack
+- `npm run build` - Create production build
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint checks
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` file in the root directory:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+```
 
-## Deploy on Vercel
+## 🔐 Security
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Implements secure authentication patterns
+- Uses secure HTTP-only cookies
+- Protected API routes with middleware
+- Input validation using zod
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 🚀 Deployment
+
+The application is optimized for deployment on Vercel:
+
+1. Push your code to GitHub
+2. Import your repository to Vercel
+3. Configure environment variables
+4. Deploy!
+
+For other platforms, ensure you:
+1. Build the application (`npm run build`)
+2. Start the production server (`npm run start`)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🤝 Contributing
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## ✨ Acknowledgments
+
+- Next.js team for the amazing framework
+- Vercel for the deployment platform
+- All contributors and maintainers

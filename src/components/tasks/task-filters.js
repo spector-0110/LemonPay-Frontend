@@ -286,7 +286,7 @@ export default function TaskFilters({ onFilter, totalTasks, overdueTasks, todayT
           className={`border-t border-gray-200 ${isMobile ? 'mt-3 pt-3' : 'mt-4 pt-4'}`}
         >
           <p className="text-sm text-gray-600">
-            Searching for "<span className="font-medium text-gray-900">{searchTerm}</span>"
+            Searching for &quot;<span className="font-medium text-gray-900">{searchTerm}</span>&quot;
             {activeFilter !== 'all' && (
               <span> in {filters.find(f => f.key === activeFilter)?.label.toLowerCase()}</span>
             )}

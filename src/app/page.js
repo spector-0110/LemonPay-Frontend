@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { apiService } from '@/lib/api';
 import { setAuthToken } from '@/lib/auth';
 import { toast } from 'sonner';
+import Image from 'next/image';
 
 const loginSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
@@ -103,7 +104,7 @@ export default function Home() {
                   <div className="flex items-center">
                     <span className="text-6xl font-bold text-yellow-300 drop-shadow-lg">lem</span>
                     <div className="w-16 h-16 rounded-full flex items-center justify-center">
-                      <img src="/lemon.png" alt="Lemon" className="w-34 h-14 drop-shadow-lg" />
+                      <Image src="/lemon.png" alt="Lemon" width={56} height={56} className="drop-shadow-lg" />
                     </div>
                     <span className="text-6xl font-bold text-yellow-300 drop-shadow-lg">n</span>
                     <span className="text-6xl font-bold text-green-300 drop-shadow-lg">pay</span>

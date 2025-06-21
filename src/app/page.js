@@ -163,7 +163,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white/15 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/30 shadow-2xl lg:col-start-2"
+            className="bg-white/25 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/40 shadow-2xl lg:col-start-2"
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-md">
@@ -176,7 +176,7 @@ export default function Home() {
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <label className="block text-white text-sm font-semibold mb-2 drop-shadow-sm">Email</label>
+                <label className="block text-white text-sm font-semibold mb-2 drop-shadow">Email</label>
                 <input
                   type="email"
                   {...register('email')}

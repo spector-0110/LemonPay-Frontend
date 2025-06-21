@@ -5,7 +5,7 @@ import { CheckSquare, Plus } from 'lucide-react';
 import TaskCard from './task-card';
 import { useMobile, useMobileAnimation } from '@/hooks/useMobile';
 
-export default function TaskList({ tasks, loading, onEditTask, onDeleteTask, onStatusChange }) {
+export default function TaskList({ tasks, loading, onEditTask, onDeleteTask, onStatusChange, onCreateTask }) {
   const { isMobile, isTablet, screenSize } = useMobile();
   const { getVariants, getHoverProps } = useMobileAnimation();
 
@@ -100,7 +100,7 @@ export default function TaskList({ tasks, loading, onEditTask, onDeleteTask, onS
             transition={{ delay: 0.5 }}
           >
             <button
-              onClick={() => document.querySelector('[data-fab]')?.click()}
+              onClick={onCreateTask}
               className={`
                 inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 
                 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-medium 

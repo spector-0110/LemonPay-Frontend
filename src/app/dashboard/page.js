@@ -345,6 +345,7 @@ const handleUpdateTask = async (taskData) => {
           onEditTask={handleEditTask}
           onDeleteTask={handleDeleteClick}
           onStatusChange={handleStatusChange}
+          onCreateTask={openCreateModal}
         />
 
         {/* Mobile FAB */}

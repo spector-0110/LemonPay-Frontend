@@ -216,15 +216,22 @@ For other platforms, ensure you:
 
 Here's a visual overview of the application:
 
-### Demonstration Video
-<video width="100%" controls>
-  <source src="screenshots/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-[![Watch the demo video](screenshots/landingpage.png)](screenshots/demo.mp4)
 [▶️ Click to download and watch the demo video](screenshots/demo.mp4)
 
+### Landing Page
+![Landing Page](screenshots/landingpage.png)
+
+### Task Dashboard
+![Task Dashboard](screenshots/dashboard.png)
+
+### Create Task
+![Create Task Modal](screenshots/newTask.png)
+
+### Task Details
+![Task Details](screenshots/tashmanagemnet.png)
+
+### Edit Task
+![Edit Task Modal](screenshots/edittask.png)
 
 ### Backend Overview
 ![Task Management](screenshots/backend.png)

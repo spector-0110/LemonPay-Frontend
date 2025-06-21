@@ -1,7 +1,21 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Allow: /dashboard
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.ico$
+
+# Block specific routes
 Disallow: /api/
 Disallow: /_next/
+Disallow: /static/
 
-# Sitemap
+# Crawl delay for better server performance
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://lemonpay.vatsa.works/sitemap.xml

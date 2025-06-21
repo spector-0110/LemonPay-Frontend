@@ -15,15 +15,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "LemonPay - Assesment-> Task Management",
+  title: "LemonPay - Modern Payment Solutions & Task Management",
   description: "LemonPay offers seamless payment solutions and task management tools. Experience secure transactions, real-time tracking, and efficient workflow management for businesses.",
-  keywords: "LemonPay, payment solutions, task management, secure payments, business workflow, transaction management, financial management, payment processing",
+  keywords: "LemonPay, payment solutions, task management, secure payments, business workflow, transaction management, financial management, payment processing, fintech, digital payments",
   authors: [{ name: "LemonPay" }],
   creator: "LemonPay",
   publisher: "LemonPay",
   metadataBase: new URL('https://lemonpay.vatsa.works'),
   alternates: {
     canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
     title: "LemonPay - Modern Payment Solutions & Task Management",

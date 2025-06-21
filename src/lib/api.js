@@ -1,4 +1,7 @@
+import { mockTasks, mockUser } from './mockData';
+
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+
 
 class APIService {
   constructor() {
@@ -32,6 +35,15 @@ class APIService {
 
     if (!response.ok) {
       const error = await response.json().catch(() => ({ message: 'An error occurred' }));
+      
+      // Handle validation errors specifically
+      if (response.status === 400 && error.errors) {
+        const validationError = new Error(error.message);
+        validationError.validationErrors = error.errors;
+        validationError.isValidationError = true;
+        throw validationError;
+      }
+      
       throw new Error(error.message);
     }
     return response.json();
@@ -62,13 +74,17 @@ class APIService {
 
   // Task methods
   async createTask(taskData) {
-    return this.request('/tasks', {
+    const response = await this.request('/tasks', {
       method: 'POST',
       body: JSON.stringify(taskData),
     });
+    
+    // Ensure we return the created task data for frontend state management
+    // Expected response: { success: true, data: taskObject } or taskObject directly
+    return response;
   }
 
-  async getTasks(params = {}) {
+  async getTasks(params = {}) {    
     const searchParams = new URLSearchParams(params);
     return this.request(`/tasks?${searchParams}`);
   }
@@ -77,14 +93,18 @@ class APIService {
     return this.request(`/tasks/${id}`);
   }
 
-  async updateTask(id, taskData) {
-    return this.request(`/tasks/${id}`, {
+  async updateTask(id, taskData) {    
+    const response = await this.request(`/tasks/${id}`, {
       method: 'PUT',
       body: JSON.stringify(taskData),
     });
+    
+    // Ensure we return the updated task data for frontend state management
+    // Expected response: { success: true, data: taskObject } or taskObject directly
+    return response;
   }
 
-  async deleteTask(id) {
+  async deleteTask(id) {    
     return this.request(`/tasks/${id}`, {
       method: 'DELETE',
     });

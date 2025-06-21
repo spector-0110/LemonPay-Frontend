@@ -83,33 +83,41 @@ export default function Home() {
       {/* Gradient Background with Animated Blobs */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-400 to-blue-900">
         {/* Animated Background Blobs */}
-        <div className="absolute top-0 -right-4 w-72 h-72 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000" style={{backgroundColor: '#FDBC31'}}></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
-        <div className="absolute bottom-0 right-20 w-72 h-72 bg-blue-800 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-6000"></div>
+        <div 
+          className="absolute -top-10 -right-10 w-40 sm:w-80 h-40 sm:h-80 rounded-full mix-blend-multiply filter blur-lg opacity-70 " 
+          style={{backgroundColor: '#FDBC31'}}
+        ></div>
+        <div 
+          className="absolute -bottom-10 -left-10 w-40 sm:w-80 h-40 sm:h-80 rounded-full mix-blend-multiply filter blur-lg opacity-70 "
+          style={{backgroundColor: '#EC4899'}}
+        ></div>
+        <div 
+          className="absolute -bottom-10 -right-10 w-40 sm:w-80 h-40 sm:h-80 rounded-full mix-blend-multiply filter blur-lg opacity-70 "
+          style={{backgroundColor: '#2563EB'}}
+        ></div>
       </div>
 
       {/* Header */}
       <header className="relative z-10">
-        
         <nav className="max-w-7xl mx-auto px-4 sm:px-2 lg:px-2 py-3">
-          <div className="flex items-start justify-between">
+          <div className="flex items-center justify-center sm:justify-between">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-3 -ml-4 mt-8"
+              className="flex items-center space-x-3 mt-4 sm:mt-8"
             >
               {/* LemonPay Logo */}
               <div className="flex items-center">
                 <div>
                   <div className="flex items-center">
-                    <span className="text-6xl font-bold text-yellow-300 drop-shadow-lg">lem</span>
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center">
-                      <Image src="/lemon.png" alt="Lemon" width={56} height={56} className="drop-shadow-lg" />
+                    <span className="text-4xl sm:text-6xl font-bold text-yellow-300 drop-shadow-lg">lem</span>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center">
+                      <Image src="/lemon.png" alt="Lemon" width={48} height={48} className="drop-shadow-lg sm:w-[56px] sm:h-[56px]" />
                     </div>
-                    <span className="text-6xl font-bold text-yellow-300 drop-shadow-lg">n</span>
-                    <span className="text-6xl font-bold text-green-300 drop-shadow-lg">pay</span>
+                    <span className="text-4xl sm:text-6xl font-bold text-yellow-300 drop-shadow-lg">n</span>
+                    <span className="text-4xl sm:text-6xl font-bold text-green-300 drop-shadow-lg">pay</span>
                   </div>
-                  <div className="text-xl text-white font-medium drop-shadow-md">
+                  <div className="text-base sm:text-xl text-center sm:text-left text-white font-medium drop-shadow-md">
                     <span className="text-yellow-200">Your success is</span>
                     <span className="text-green-300"> our focus</span>
                   </div>
@@ -121,20 +129,20 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-100px)] px-4">
-        <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Hero Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-[calc(100vh-100px)] px-4 py-8">
+        <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
+          {/* Left Side - Hero Content - Hidden on mobile */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white"
+            className="text-white text-center lg:text-left hidden lg:block"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-2xl lg:text-6xl font-bold mb-6 drop-shadow-lg"
+              className="text-4xl lg:text-6xl font-bold mb-6 drop-shadow-lg"
             >
               Join <span className="text-yellow-300">1000 </span> Businesses
             </motion.h1>
@@ -155,7 +163,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white/15 backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-2xl"
+            className="bg-white/15 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/30 shadow-2xl lg:col-start-2"
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-md">
@@ -237,6 +245,7 @@ export default function Home() {
               </div>
 
               <Button
+                variant='secondary'
                 type="submit"
                 className="w-full bg-white text-gray-900 hover:bg-gray-100 font-bold py-3 rounded-lg transition-all duration-200"
                 loading={isLoading}
